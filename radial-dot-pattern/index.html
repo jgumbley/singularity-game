@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Radial Starburst with Sliders</title>
+    <!-- ... your other head content, fonts, etc. ... -->
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Bitter', serif; /* or whichever font you use */
+      }
+      #controls {
+        margin: 1rem;
+        padding: 1rem;
+        background: #f5f5f5;
+      }
+      .slider-container {
+        margin-bottom: 0.5rem;
+      }
+      label {
+        display: inline-block;
+        width: 140px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- The SVG is created by our TypeScript code, so just a placeholder here -->
+    <div id="controls">
+      <div class="slider-container">
+        <label for="linesSlider">Lines:</label>
+        <input type="range" id="linesSlider" min="20" max="360" value="180" />
+        <span id="linesValue">180</span>
+      </div>
+
+      <div class="slider-container">
+        <label for="stepsSlider">Steps per line:</label>
+        <input type="range" id="stepsSlider" min="10" max="100" value="20" />
+        <span id="stepsValue">20</span>
+      </div>
+
+      <div class="slider-container">
+        <label for="dotSizeSlider">Dot radius:</label>
+        <input type="range" id="dotSizeSlider" min="1" max="5" step="0.5" value="1.5" />
+        <span id="dotSizeValue">1.5</span>
+      </div>
+
+      <div class="slider-container">
+        <label for="rMinSlider">Inner radius:</label>
+        <input type="range" id="rMinSlider" min="0" max="150" value="80" />
+        <span id="rMinValue">80</span>
+      </div>
+
+      <div class="slider-container">
+        <label for="evenMaxSlider">Even lines %:</label>
+        <input type="range" id="evenMaxSlider" min="50" max="100" value="80" />
+        <span id="evenMaxValue">80%</span>
+      </div>
+    </div>
+
+    <!-- Our main script (compiled by Vite) -->
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
